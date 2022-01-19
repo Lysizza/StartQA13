@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>HomeWork.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #067d17;}
+.s3 { color: #0037a6;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HomeWork.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">org.openqa.selenium.By;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.WebElement;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.chrome.ChromeDriver;</span>
+<span class="s0">import </span><span class="s1">org.testng.annotations.AfterMethod;</span>
+<span class="s0">import </span><span class="s1">org.testng.annotations.BeforeMethod;</span>
+<span class="s0">import </span><span class="s1">org.testng.annotations.Test;</span>
+
+<span class="s0">public class </span><span class="s1">HomeWork {</span>
+    <span class="s1">WebDriver wd;</span>
+
+    <span class="s1">@BeforeMethod</span>
+    <span class="s0">public void </span><span class="s1">preCondition(){</span>
+        <span class="s1">wd = </span><span class="s0">new </span><span class="s1">ChromeDriver();</span>
+        <span class="s1">System.setProperty(</span><span class="s2">&quot;webdriver.chrome.driver&quot;</span><span class="s1">,</span><span class="s2">&quot;C:</span><span class="s3">\\</span><span class="s2">Users</span><span class="s3">\\</span><span class="s2">Alex</span><span class="s3">\\</span><span class="s2">Documents</span><span class="s3">\\</span><span class="s2">GitHub</span><span class="s3">\\</span><span class="s2">Start_QA_13</span><span class="s3">\\</span><span class="s2">chromedriver.exe&quot;</span><span class="s1">);</span>
+
+        <span class="s1">wd.navigate().to(</span><span class="s2">&quot;https://contacts-app.tobbymarshall815.vercel.app/login&quot;</span><span class="s1">);</span>
+    <span class="s1">}</span>
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">findElement() {</span>
+        <span class="s1">WebElement element = wd.findElement(By.xpath(</span><span class="s2">&quot;//*[text()='PHONEBOOK']&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;.navbar-component_nav__1X_4m :first-child&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.tagName(</span><span class="s2">&quot;h1&quot;</span><span class="s1">));</span>
+
+        <span class="s1">wd.findElement(By.xpath(</span><span class="s2">&quot;//*[@href='/home']&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;[href='/home']&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.linkText(</span><span class="s2">&quot;HOME&quot;</span><span class="s1">));</span>
+
+        <span class="s1">wd.findElement(By.xpath(</span><span class="s2">&quot;html[1]/body[1]/div[1]/div[1]/a[2]&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;body :first-child :first-child :nth-child(3)&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.linkText(</span><span class="s2">&quot;LOGIN&quot;</span><span class="s1">));</span>
+
+        <span class="s1">wd.findElement(By.xpath(</span><span class="s2">&quot;//*[contains(@href, 'ogi')]&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;[href *='ogi']&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.partialLinkText(</span><span class="s2">&quot;OGI&quot;</span><span class="s1">));</span>
+
+        <span class="s1">wd.findElement(By.xpath(</span><span class="s2">&quot;//div//input[1]&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;.login_login__3EHKB &gt;input[placeholder='Email']&quot;</span><span class="s1">));</span>
+
+        <span class="s1">wd.findElement(By.xpath(</span><span class="s2">&quot;//*[@placeholder='Password']&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;input[placeholder$='rd']&quot;</span><span class="s1">));</span>
+
+        <span class="s1">wd.findElement(By.xpath(</span><span class="s2">&quot;//*[.=' Login']&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;[class^='login'] :nth-child(4)&quot;</span><span class="s1">));</span>
+
+        <span class="s1">wd.findElement(By.xpath(</span><span class="s2">&quot;//div//button[text()=' Registration']&quot;</span><span class="s1">));</span>
+        <span class="s1">wd.findElement(By.cssSelector(</span><span class="s2">&quot;.login_login__3EHKB :last-child&quot;</span><span class="s1">));</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@AfterMethod</span>
+    <span class="s0">public void </span><span class="s1">closeSite(){</span>
+        <span class="s1">wd.quit();</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

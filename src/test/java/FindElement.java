@@ -17,7 +17,7 @@ public class FindElement {
         wd = new ChromeDriver(); // ChromeDriver driver = new ChromeDriver();
        // System.setProperty("webdriver.chrome.driver","/path/to/chromedriver");
 
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Alex\\Documents\\GitHub\\Start_QA_13\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Alex\\Documents\\GitHub\\Start_QA_13\\chromedriver.exe ");
         wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/login");
     }
 
